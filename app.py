@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 from pages.home_page import home_page
+from pages.prediction_page import prediction_page
 from pages.view_previous_events import view_previous_events # ✅ Import View History function
 
 # Page config
@@ -30,8 +31,7 @@ st.markdown("<h1 style='text-align: center;'>AI-Based Solar Flare Monitoring & F
 if selected == "Home":
     home_page()
 elif selected == "Prediction":
-    st.subheader("📈 Make a Prediction")
-    st.write("Coming soon: Enter parameters or a date to predict solar flares.")
+    prediction_page()
 elif selected == "View Previous Events":
     view_previous_events()
 elif selected == "About":
